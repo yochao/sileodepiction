@@ -1,17 +1,21 @@
+                      
+
+
 {
-  "minVersion": "1.0",
-  "headerImage": "https://apt.htv123.com/image/0001.jpg",
+  "minVersion": "0.1",
+  "headerImage":"https://apt.htv123.com/image/0001.jpg",
   "tabs": [
     {
       "tabname": "插件介绍(Details)",
       "views": [
-        {
-          "class": "DepictionMarkdownView",
-          "markdown": "## 系统兼容性检测\n\n**检测结果**: {{#if (>= Firmware 15.0)}}{{#if (<= Firmware 15.9)}}✅ 完全兼容{{else}}❌ 不兼容 (系统版本过高){{/if}}{{else}}❌ 不兼容 (系统版本过低){{/if}}\n\n**您的系统**: iOS {{Firmware}}\n**要求系统**: iOS 15.0 - 15.9",
-          "useSpacing": true
+        {              
+            "text" : "☹ 您的系统: iOS ✋不兼容该软件包",
+            "action" :"",     
+            "tintColor" : "#f15a22", 
+            "class" : "DepictionButtonView"
         },
         {
-          "class": "DepictionLabelView",
+         "class": "DepictionLabelView",
           "text": "插件功能说明(Description)",
           "fontWeight": "semibold",
           "fontSize": 17,
@@ -20,245 +24,235 @@
           "margins": "{10,0,8,0}"
         },
         {
-          "markdown": "\n电话助手授权版本,T9双卡选卡拨号键盘,短信双卡选卡,通话录音,来去电归属地,黑名单,骚扰拦截,状态栏图标替换,时间格式修改,常用小功能等强大插件",
-          "useSpacing": true,
-          "class": "DepictionMarkdownView"
+           "markdown":"\n电话助手授权版本,T9双卡选卡拨号键盘,短信双卡选卡,通话录音,来去电归属地,黑名单,骚扰拦截,状态栏图标替换,时间格式修改,常用小功能等强大插件",
+           "useSpacing":true,
+           "class":"DepictionMarkdownView"
+        },
+		{
+            "spacing": 20,
+			"class": "DepictionSpacerView"
+		},
+        {
+          "class":"DepictionSeparatorView"
         },
         {
-          "spacing": 20,
-          "class": "DepictionSpacerView"
+            "title":"赞助正版授权",
+            "action":"https://buy.htv123.com",
+            "class":"DepictionTableButtonView"
         },
         {
-          "class": "DepictionSeparatorView"
-        },
+			"class": "DepictionSeparatorView"
+		},
         {
-          "title": "赞助正版授权",
-          "action": "https://buy.htv123.com",
-          "class": "DepictionTableButtonView"
-        },
-        {
-          "class": "DepictionSeparatorView"
-        },
-        {
-          "class": "DepictionLabelView",
+         "class": "DepictionLabelView",
           "text": "软件截图预览(Screenshot)",
           "fontWeight": "semibold",
           "fontSize": 17,
           "usePadding": true,
           "useMargins": true,
           "margins": "{10,0,8,0}"
-        },
+        },				{
+			"itemCornerRadius": 6,
+			"itemSize": "{127, 275}",
+			"screenshots": [
+			  {"accessibilityText": "Screenshot","url": "https://apt.htv123.com/image/NoShort.jpg"}
+			],
+			"class": "DepictionScreenshotsView"
+		}, {
+			"class": "DepictionSeparatorView"
+		},
         {
-          "itemCornerRadius": 6,
-          "itemSize": "{127, 275}",
-          "screenshots": [
-            {
-              "accessibilityText": "Screenshot",
-              "url": "https://apt.htv123.com/image/NoShort.jpg"
-            }
-          ],
-          "class": "DepictionScreenshotsView"
-        },
-        {
-          "class": "DepictionSeparatorView"
-        },
-        {
-          "class": "DepictionLabelView",
+         "class": "DepictionLabelView",
           "text": "版本详细说明(Details)",
           "fontWeight": "semibold",
           "fontSize": 16,
           "usePadding": true,
           "useMargins": true,
           "margins": "{10,0,8,0}"
-        },
+        },               
         {
-          "class": "DepictionStackView",
-          "orientation": "landscape",
-          "views": [
+         "class": "DepictionStackView",
+         "orientation": "landscape",
+         "views": [
+          {
+           "class": "DepictionStackView",
+           "views": [
             {
-              "class": "DepictionStackView",
-              "views": [
-                {
-                  "class": "DepictionLabelView",
-                  "text": "当前版本(Version)",
-                  "textColor": "#777",
-                  "margins": "{16,0,8,0}"
-                },
-                {
-                  "class": "DepictionLabelView",
-                  "text": "2.3.1",
-                  "fontWeight": "semibold",
-                  "fontSize": 16,
-                  "usePadding": false
-                },
-                {
-                  "class": "DepictionLabelView",
-                  "text": "开发人员(Developer)",
-                  "textColor": "#777",
-                  "margins": "{16,0,8,0}"
-                },
-                {
-                  "class": "DepictionLabelView",
-                  "text": "xybp888",
-                  "fontWeight": "semibold",
-                  "fontSize": 16,
-                  "usePadding": false
-                }
-              ]
+             "class": "DepictionLabelView",
+             "text": "当前版本(Version)",
+             "textColor": "#777",
+             "margins": "{16,0,8,0}"
             },
             {
-              "class": "DepictionStackView",
-              "views": [
-                {
-                  "class": "DepictionLabelView",
-                  "text": "更新时间(Updated)",
-                  "textColor": "#777",
-                  "margins": "{16,0,8,0}"
-                },
-                {
-                  "class": "DepictionLabelView",
-                  "text": "2025/07/22",
-                  "fontWeight": "semibold",
-                  "fontSize": 16,
-                  "usePadding": false
-                },
-                {
-                  "class": "DepictionLabelView",
-                  "text": "系统兼容(iOS Version)",
-                  "textColor": "#777",
-                  "margins": "{16,0,8,0}"
-                },
-                {
-                  "class": "DepictionLabelView",
-                  "text": "15.0 ~ 15.9",
-                  "fontWeight": "semibold",
-                  "fontSize": 17,
-                  "usePadding": false
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "class": "DepictionStackView",
-          "orientation": "landscape",
-          "views": [
-            {
-              "class": "DepictionStackView",
-              "views": [
-                {
-                  "class": "DepictionLabelView",
-                  "text": "插件大小(Tweak size)",
-                  "textColor": "#777",
-                  "margins": "{16,0,8,0}"
-                },
-                {
-                  "class": "DepictionLabelView",
-                  "text": "2.51 MB",
-                  "fontWeight": "semibold",
-                  "fontSize": 16,
-                  "usePadding": false
-                }
-              ]
+             "class": "DepictionLabelView",
+             "text": "2.3.1",
+             "fontWeight": "semibold",
+             "fontSize": 16,
+             "usePadding": false
             },
             {
-              "class": "DepictionStackView",
-              "views": [
-                {
-                  "class": "DepictionLabelView",
-                  "text": "支持语言(Language)",
-                  "textColor": "#777",
-                  "margins": "{16,0,8,0}"
-                },
-                {
-                  "class": "DepictionLabelView",
-                  "text": "中文/英文(CN/EN)",
-                  "fontWeight": "semibold",
-                  "fontSize": 16,
-                  "usePadding": false
-                }
-              ]
+             "class": "DepictionLabelView",
+             "text": "开发人员(Developer)",
+             "textColor": "#777",
+             "margins": "{16,0,8,0}"
+            },
+            {
+             "class": "DepictionLabelView",
+             "text": "xybp888",
+             "fontWeight": "semibold",
+             "fontSize": 16,
+             "usePadding": false
             }
-          ]
+           ]
+          },
+          {
+           "class": "DepictionStackView",
+           "views": [
+            {
+             "class": "DepictionLabelView",
+             "text": "更新时间(Updated)",
+             "textColor": "#777",
+             "margins": "{16,0,8,0}"
+            },
+            {
+             "class": "DepictionLabelView",
+             "text": "2025/07/22",
+             "fontWeight": "semibold",
+             "fontSize": 16,
+             "usePadding": false
+            },
+            {
+             "class": "DepictionLabelView",
+             "text": "系统兼容(iOS Version)",
+             "textColor": "#777",
+             "margins": "{16,0,8,0}"
+            },
+            {
+             "class": "DepictionLabelView",
+                           "text": "15.0 ~ 15.9",
+             "fontWeight": "semibold",
+             "fontSize": 17,
+             "usePadding": false
+            }
+           ]
+          },
+         ]
+        },
+               {
+         "class": "DepictionStackView",
+         "orientation": "landscape",
+         "views": [
+          {
+           "class": "DepictionStackView",
+           "views": [
+            {
+             "class": "DepictionLabelView",
+             "text": "插件大小(Tweak size)",
+             "textColor": "#777",
+             "margins": "{16,0,8,0}"
+            },
+            {
+             "class": "DepictionLabelView",
+             "text": "2.51 MB",
+             "fontWeight": "semibold",
+             "fontSize": 16,
+             "usePadding": false
+            }
+           ]
+          },
+          {
+           "class": "DepictionStackView",
+           "views": [
+             {
+             "class": "DepictionLabelView",
+             "text": "支持语言(Language)",
+             "textColor": "#777",
+             "margins": "{16,0,8,0}"
+            },
+            {
+             "class": "DepictionLabelView",
+             "text": "中文/英文(CN/EN)",
+             "fontWeight": "semibold",
+             "fontSize": 16,
+             "usePadding": false
+            }
+           ]
+          },
+         ]
         },
         {
-          "spacing": 25,
-          "class": "DepictionSpacerView"
-        },
+            "spacing": 25,
+			"class": "DepictionSpacerView"
+		},
         {
-          "class": "DepictionSeparatorView"
+          "class":"DepictionSeparatorView"
         },
-        {
+		{
           "useSpacing": true,
           "class": "DepictionMarkdownView",
-          "useRawFormat": true,
-          "markdown": "<small style=\"color: #aaa; font-size: 10pt;\">鄂公网安备 42022202000063号<BR />鄂ICP备15008807号-2<BR />电话助手(CallAssist) ©2018 - 2025</small><style>body { text-align: center; }</style>"
-        }
-      ],
+		  "useRawFormat": true,
+		  "markdown": "<small style=\"color: #aaa; font-size: 10pt;\">鄂公网安备 42022202000063号<BR />鄂ICP备15008807号-2<BR />电话助手(CallAssist) ©2018 - 2025</small><style>body { text-align: center; }</style>"
+        },
+        ],
       "class": "DepictionStackView"
     },
     {
       "tabname": "更新日志(Changelog)",
       "views": [
-        {
-          "class": "DepictionMarkdownView",
-          "markdown": "{{#if (and (>= Firmware 15.0) (<= Firmware 15.9))}}\n## ✅ 系统兼容: iOS {{Firmware}}\n{{else}}\n## ⚠️ 系统不兼容: iOS {{Firmware}}\n**要求系统: iOS 15.0 - 15.9**\n{{/if}}",
-          "useSpacing": true,
-          "useRawFormat": true
+         {              
+            "text" : "☹ 您的系统: iOS ✋不兼容该软件包",
+            "action" :"",     
+            "tintColor" : "#f15a22", 
+            "class" : "DepictionButtonView"
         },
         {
-          "class": "DepictionSeparatorView"
-        },
-        {
-          "class": "DepictionStackView",
-          "orientation": "landscape",
-          "views": [
-            {
-              "class": "DepictionLabelView",
-              "text": "2.3.1",
-              "fontWeight": "semibold",
-              "fontSize": 18,
-              "usePadding": true,
-              "useMargins": true,
-              "margins": "{10,0,8,0}"
-            },
-            {
-              "class": "DepictionLabelView",
-              "text": "更新于(Updated):2025/07/22 08:42",
-              "fontSize": 12,
-              "useSpacing": false,
-              "usePadding": true,
-              "useMargins": true,
-              "margins": "{10,0,8,16}",
-              "textColor": "#999",
-              "alignment": 2
-            }
-          ]
-        },
-        {
-          "markdown": "1.优化 T9 搜索支持订阅通讯录联系人\n*** ",
-          "class": "DepictionMarkdownView",
-          "useSpacing": false
-        },
-        {
-          "class": "DepictionLabelView",
-          "text": "",
-          "fontSize": 0,
-          "useSpacing": false,
-          "usePadding": true,
-          "useMargins": true,
-          "margins": "{-4,0,0,0}",
-          "textColor": "#999",
-          "alignment": 0
-        },
-        {
-          "class": "DepictionSeparatorView"
-        },
-        {
+			"class": "DepictionSeparatorView"
+		},
+      {"class": "DepictionStackView",
+                   "orientation": "landscape",
+                   "views": [
+                    {
+                     "class": "DepictionLabelView",
+                     "text": "2.3.1",
+                     "fontWeight": "semibold",
+                     "fontSize": 18,
+                     "usePadding": true,
+                     "useMargins": true,
+                     "margins": "{10,0,8,0}"
+                    },
+                    {
+                     "class": "DepictionLabelView",
+                     "text": "更新于(Updated):2025/07/22 08:42",
+                     "fontSize": 12,
+                     "useSpacing": false,
+                     "usePadding": true,
+                     "useMargins": true,
+                     "margins": "{10,0,8,16}",
+                     "textColor": "#999",
+                     "alignment": 2
+                    }
+                   ]},{
+                    "markdown":"1.优化 T9 搜索支持订阅通讯录联系人\n*** ",
+                    "class": "DepictionMarkdownView",
+                    "useSpacing":false
+                    },{
+                   "class": "DepictionLabelView",
+                   "text": "",
+                   "fontSize": 0,
+                   "useSpacing": false,
+                   "usePadding": true,
+                   "useMargins": true,
+                   "margins": "{-4,0,0,0}",
+                   "textColor": "#999",
+                   "alignment": 0
+                  },
+                  {
+                   "class": "DepictionSeparatorView"
+                  },{
           "useSpacing": true,
           "class": "DepictionMarkdownView",
-          "useRawFormat": true,
-          "markdown": "<small style=\"color: #aaa; font-size: 10pt;\">鄂公网安备 42022202000063号<BR />鄂ICP备15008807号-2<BR />电话助手(CallAssist) ©2018 - 2025</small><style>body { text-align: center; }</style>"
+		  "useRawFormat": true,
+		  "markdown": "<small style=\"color: #aaa; font-size: 10pt;\">鄂公网安备 42022202000063号<BR />鄂ICP备15008807号-2<BR />电话助手(CallAssist) ©2018 - 2025</small><style>body { text-align: center; }</style>"
         }
       ],
       "class": "DepictionStackView"

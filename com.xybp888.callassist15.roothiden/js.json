@@ -1,5 +1,5 @@
 {
-  "minVersion": "0.1",
+  "minVersion": "1.0",
   "headerImage": "https://apt.htv123.com/image/0001.jpg",
   "tabs": [
     {
@@ -7,9 +7,8 @@
       "views": [
         {
           "class": "DepictionMarkdownView",
-          "markdown": "{{#if (and (>= Firmware 15.0) (<= Firmware 15.9))}}\n## ✅ 兼容性检测通过\n**您的系统: iOS {{Firmware}}** 完全兼容该软件包\n{{else}}\n## ❌ 兼容性检测未通过\n**您的系统: iOS {{Firmware}}** 不兼容该软件包\n\n**要求系统**: iOS 15.0 - 15.9\n{{/if}}",
-          "useSpacing": true,
-          "useRawFormat": true
+          "markdown": "## 系统兼容性检测\n\n**检测结果**: {{#if (>= Firmware 15.0)}}{{#if (<= Firmware 15.9)}}✅ 完全兼容{{else}}❌ 不兼容 (系统版本过高){{/if}}{{else}}❌ 不兼容 (系统版本过低){{/if}}\n\n**您的系统**: iOS {{Firmware}}\n**要求系统**: iOS 15.0 - 15.9",
+          "useSpacing": true
         },
         {
           "class": "DepictionLabelView",

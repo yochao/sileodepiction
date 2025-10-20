@@ -1,24 +1,14 @@
 {
-  "minVersion": "1.0",
+  "minVersion": "1.0", 
   "headerImage": "https://apt.htv123.com/image/0001.jpg",
   "tabs": [
     {
       "tabname": "插件介绍(Details)",
       "views": [
         {
-          "class": "DepictionTableTextView",
-          "title": "您的系统版本",
-          "text": "iOS {{Firmware}}"
-        },
-        {
-          "class": "DepictionTableTextView",
-          "title": "要求系统版本", 
-          "text": "iOS 15.0 - 15.9"
-        },
-        {
-          "class": "DepictionTableTextView",
-          "title": "兼容状态",
-          "text": "{{#if (>= Firmware 15.0)}}{{#if (<= Firmware 15.9)}}✅ 兼容{{else}}❌ 不兼容{{/if}}{{else}}❌ 不兼容{{/if}}"
+          "class": "DepictionMarkdownView",
+          "markdown": "**系统版本**: iOS {{Firmware}}\n\n{{#if (>= Firmware 15.0)}}{{#if (<= Firmware 15.9)}}**✅ 兼容您的设备**{{else}}**❌ 不兼容 - 系统版本过高**{{/if}}{{else}}**❌ 不兼容 - 系统版本过低**{{/if}}",
+          "useSpacing": true
         },
         {
           "markdown": "\n电话助手授权版本,T9双卡选卡拨号键盘,短信双卡选卡,通话录音,来去电归属地,黑名单,骚扰拦截,状态栏图标替换,时间格式修改,常用小功能等强大插件",

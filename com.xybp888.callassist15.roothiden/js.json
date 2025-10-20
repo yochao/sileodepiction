@@ -1,6 +1,3 @@
-                      
-
-
 {
   "minVersion": "0.1",
   "headerImage":"https://apt.htv123.com/image/0001.jpg",
@@ -8,11 +5,17 @@
     {
       "tabname": "插件介绍(Details)",
       "views": [
-        {              
-            "text" : "☹ 您的系统: iOS ✋不兼容该软件包",
-            "action" :"",     
-            "tintColor" : "#f15a22", 
-            "class" : "DepictionButtonView"
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "## 系统兼容性检测\n\n正在检测您的系统版本...",
+          "useSpacing": true,
+          "useRawFormat": true
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "useRawFormat": true,
+          "markdown": "<div id=\"compatibility-check\" style=\"background: #fff3cd; border: 1px solid #ffeaa7; border-radius: 8px; padding: 12px; margin: 10px 0;\">\n  <div style=\"font-weight: bold; color: #856404;\">🔍 检测中...</div>\n  <div style=\"font-size: 14px; color: #666; margin-top: 5px;\">正在验证系统兼容性</div>\n</div>\n\n<script>\nfunction checkCompatibility() {\n  // 这里应该通过其他方式获取系统版本\n  // 由于Sileo限制，我们只能显示静态信息\n  const minVersion = 15.0;\n  const maxVersion = 15.9;\n  \n  // 显示兼容性信息\n  const compatDiv = document.getElementById('compatibility-check');\n  if (compatDiv) {\n    compatDiv.innerHTML = `\n      <div style=\"font-weight: bold; color: #721c24;\">⚠️ 兼容性信息</div>\n      <div style=\"font-size: 14px; color: #666; margin-top: 5px;\">\n        <strong>要求系统:</strong> iOS ${minVersion} - ${maxVersion}<br>\n        <strong>检测状态:</strong> 请在安装前确认系统版本<br>\n        <strong>提示:</strong> 不兼容的系统可能导致设备异常\n      </div>\n    `;\n  }\n}\n\n// 页面加载后执行检测\nif (document.readyState === 'loading') {\n  document.addEventListener('DOMContentLoaded', checkCompatibility);\n} else {\n  checkCompatibility();\n}\n</script>",
+          "useSpacing": false
         },
         {
          "class": "DepictionLabelView",
@@ -129,7 +132,7 @@
             },
             {
              "class": "DepictionLabelView",
-                           "text": "15.0 ~ 15.9",
+             "text": "15.0 ~ 15.9",
              "fontWeight": "semibold",
              "fontSize": 17,
              "usePadding": false
@@ -138,7 +141,7 @@
           },
          ]
         },
-               {
+        {
          "class": "DepictionStackView",
          "orientation": "landscape",
          "views": [
@@ -199,60 +202,65 @@
     {
       "tabname": "更新日志(Changelog)",
       "views": [
-         {              
-            "text" : "☹ 您的系统: iOS ✋不兼容该软件包",
-            "action" :"",     
-            "tintColor" : "#f15a22", 
-            "class" : "DepictionButtonView"
+        {
+          "class": "DepictionMarkdownView",
+          "useRawFormat": true,
+          "markdown": "<div style=\"background: #f8d7da; border: 1px solid #f5c6cb; border-radius: 8px; padding: 12px; margin: 10px 0;\">\n  <div style=\"font-weight: bold; color: #721c24;\">⚠️ 重要兼容性提示</div>\n  <div style=\"font-size: 14px; color: #666; margin-top: 5px;\">\n    <strong>系统要求:</strong> iOS 15.0 - 15.9<br>\n    <strong>不兼容系统:</strong> iOS 16.0+ 及其他版本<br>\n    <strong>风险提示:</strong> 在不兼容系统上安装可能导致设备异常\n  </div>\n</div>",
+          "useSpacing": false
         },
         {
 			"class": "DepictionSeparatorView"
 		},
-      {"class": "DepictionStackView",
-                   "orientation": "landscape",
-                   "views": [
-                    {
-                     "class": "DepictionLabelView",
-                     "text": "2.3.1",
-                     "fontWeight": "semibold",
-                     "fontSize": 18,
-                     "usePadding": true,
-                     "useMargins": true,
-                     "margins": "{10,0,8,0}"
-                    },
-                    {
-                     "class": "DepictionLabelView",
-                     "text": "更新于(Updated):2025/07/22 08:42",
-                     "fontSize": 12,
-                     "useSpacing": false,
-                     "usePadding": true,
-                     "useMargins": true,
-                     "margins": "{10,0,8,16}",
-                     "textColor": "#999",
-                     "alignment": 2
-                    }
-                   ]},{
-                    "markdown":"1.优化 T9 搜索支持订阅通讯录联系人\n*** ",
-                    "class": "DepictionMarkdownView",
-                    "useSpacing":false
-                    },{
-                   "class": "DepictionLabelView",
-                   "text": "",
-                   "fontSize": 0,
-                   "useSpacing": false,
-                   "usePadding": true,
-                   "useMargins": true,
-                   "margins": "{-4,0,0,0}",
-                   "textColor": "#999",
-                   "alignment": 0
-                  },
-                  {
-                   "class": "DepictionSeparatorView"
-                  },{
+        {
+          "class": "DepictionStackView",
+          "orientation": "landscape",
+          "views": [
+            {
+             "class": "DepictionLabelView",
+             "text": "2.3.1",
+             "fontWeight": "semibold",
+             "fontSize": 18,
+             "usePadding": true,
+             "useMargins": true,
+             "margins": "{10,0,8,0}"
+            },
+            {
+             "class": "DepictionLabelView",
+             "text": "更新于(Updated):2025/07/22 08:42",
+             "fontSize": 12,
+             "useSpacing": false,
+             "usePadding": true,
+             "useMargins": true,
+             "margins": "{10,0,8,16}",
+             "textColor": "#999",
+             "alignment": 2
+            }
+          ]
+        },
+        {
+          "markdown":"1.优化 T9 搜索支持订阅通讯录联系人\n*** ",
+          "class": "DepictionMarkdownView",
+          "useSpacing":false
+        },
+        {
+          "class": "DepictionLabelView",
+          "text": "",
+          "fontSize": 0,
+          "useSpacing": false,
+          "usePadding": true,
+          "useMargins": true,
+          "margins": "{-4,0,0,0}",
+          "textColor": "#999",
+          "alignment": 0
+        },
+        {
+          "class": "DepictionSeparatorView"
+        },
+        {
           "useSpacing": true,
           "class": "DepictionMarkdownView",
-		  "useRawFormat": true,
-		  "markdown": "<small style=\"color: #aaa; font-size: 10pt;\">鄂公网安备 42022202000063号<BR />鄂ICP备15008807号-2<BR />电话助手(CallAssist) ©2018 - 2025</small><style>body { text-align: center; }</style>"
+          "useRawFormat": true,
+          "markdown": "<small style=\"color: #aaa; font-size: 10pt;\">鄂公网安备 42022202000063号<BR />鄂ICP备15008807号-2<BR />电话助手(CallAssist) ©2018 - 2025</small><style>body { text-align: center; }</style>"
         }
       ],
       "class": "DepictionStackView"
